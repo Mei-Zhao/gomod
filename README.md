@@ -2,6 +2,7 @@
 go mod use test
 
 go mod init ****，开启gomod模式，不在依赖¥GOPATH/src;检查依赖本地是否有，如果没有下载，
+在当前目录初始化一个新的module， 就是说将该目录下的工程文件初始化为一个Go Module.
 日志：（hello world测试用例）
 ```
 package main
