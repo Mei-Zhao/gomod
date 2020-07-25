@@ -28,6 +28,13 @@ go: finding rsc.io/sampler v1.3.0
 go: finding golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c
 Hello, world.
 ```
+```
+module github.com/Mei-Zhao/gomod
+
+go 1.13
+
+require rsc.io/quote v1.5.2 // indirect indirect 表示这个库是间接引用进来的。
+```
 在本地有缓存，可共享,在$GOPATH/pkg下
 Go1.13开始不再推荐使用GOPATH。意思就是说你可以在任何路径下存放你的Go源码文件, 不用再像以前一样非得放到$GOPATH/src中
 目录结构：
