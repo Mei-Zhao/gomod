@@ -48,4 +48,6 @@ pkg:
         latest
       
 
-参考文献https://juejin.im/post/5ea186b3e51d45470e2bf88d
+参考文献
+https://juejin.im/post/5ea186b3e51d45470e2bf88d （go mod基础命令）
+https://www.cnblogs.com/sunsky303/p/10710637.html (pkg下面包结构及作用)
