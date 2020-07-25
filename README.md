@@ -1,4 +1,6 @@
 # gomod
+A module is defined by a tree of Go source files with a go.mod file in the tree’s root directory.
+
 go mod use test
 
 go mod init ****，开启gomod模式，不在依赖¥GOPATH/src;检查依赖本地是否有，如果没有下载，
@@ -53,12 +55,16 @@ Go1.13开始不再推荐使用GOPATH。意思就是说你可以在任何路径�
         └── sum.golang.org
 ```
 
-go get与go mod (download)
+go get与go mod (download)、git clone 
 ```
 贡献，当你需要获取的代码包是自己需要编码的包，使用go get 或者git clone;对于你依赖的第三方包（一般一个仓库的方式确定的），比如go mod方式，获取第三方依赖，然后可以本地编码
+第一种姿势：git clone（获取源代码）、git run (go mod download 获取第三方依赖)
 * 在本地新建github.com/qiniu 文件夹 (不需要在src下,不创建也可以，因为对于自定义包import 路径依赖 module的定于)
 * git clone  git@github.com:qiniu/qshell.git （go mod模式管理第三方依赖）
 * 直接go run(go version 1.13.1) main.go 会下载mod依赖（如果本地已有缓存，可以复用）
+
+第二种姿势：
+
 ```
 关于如何使用自定义的包
 ```、
@@ -80,6 +86,7 @@ hello
 https://juejin.im/post/5ea186b3e51d45470e2bf88d （go mod基础命令）
 https://www.cnblogs.com/sunsky303/p/10710637.html (pkg下面包结构及作用)
 https://www.cnblogs.com/xiaobaiskill/p/11819071.html（goland设置）
+https://blog.csdn.net/dashuniuniu/article/details/103769186 (go mod的使用解说)
 ```
 
 问题：
