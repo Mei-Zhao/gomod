@@ -28,6 +28,7 @@ go: finding golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c
 Hello, world.
 ```
 在本地有缓存，可共享,在$GOPATH/pkg下
+Go1.13开始不再推荐使用GOPATH。意思就是说你可以在任何路径下存放你的Go源码文件, 不用再像以前一样非得放到$GOPATH/src中
 目录结构：
 pkg:
     mod
@@ -38,3 +39,5 @@ pkg:
       sum.golang.org 
         latest
       
+
+参考文献https://juejin.im/post/5ea186b3e51d45470e2bf88d
