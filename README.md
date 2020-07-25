@@ -71,7 +71,7 @@ hello
 在导入时  直接使用module_name/conf   即可
 ```
 
-
+新版go get、 build、 run 等都支持module
 
 
 参考文献
