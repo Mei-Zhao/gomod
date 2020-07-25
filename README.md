@@ -64,7 +64,6 @@ go get与go mod (download)、git clone
 * 直接go run(go version 1.13.1) main.go 会下载mod依赖（如果本地已有缓存，可以复用）
 
 第二种姿势：(如果不需要.git信息) go mod download 提前fill pkg cache
-* 在一个目录下new mod, go mod init test (出现go.mod信息)
  The "go mod download" command is useful mainly for pre-filling
 the local cache or to compute the answers for a Go module proxy.
 * go mod download -json github.com/qiniu/qshell/v2@v2.4.2 (可以指定版本，默认最新release版本，如果没有最新commit)
@@ -73,7 +72,7 @@ the local cache or to compute the answers for a Go module proxy.
  ✘ zhaomei@zhaomeis-MacBook-Pro  ~/tools  go get -u github.com/qiniu/qshell/v2@v2.4.2
 go: cannot use path@version syntax in GOPATH mode
 初始化 module和不初始化对比
-* 初始化下载放在$GOPATH/pkg/mod 下(包括依赖)
+* 初始化下载放在$GOPATH/pkg/mod 下(包括依赖,不包含.git信息)
 
 * 不初始化$GOPATH/src（包括依赖，包含.git信息）When checking out a new package, get creates the target directory GOPATH/src/<import-path>.
 日志 go get -v -u github.com/qiniu/qshell
@@ -83,7 +82,7 @@ github.com/shiena/ansicolor (download)
 github.com/aws/aws-sdk-go (download)
 
 commit 8ab5b07e9818cbd3c69162c56dc4bb1c74a59592 (HEAD -> master, origin/master, origin/HEAD)
-因为有go.mod 文件go build依然会取download，可以go.mod移除
+因为有go.mod 文件go build依然会取download，可以go.mod移除(如果 使用module管理有可能在module名字中有v2版本信息，这时候会编译失败)
 
 ```
 关于如何使用自定义的包
