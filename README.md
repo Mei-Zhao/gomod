@@ -51,10 +51,15 @@ Go1.13开始不再推荐使用GOPATH。意思就是说你可以在任何路径�
     └── sumdb
         └── sum.golang.org
 ```
-```
-go mod管理包 贡献
 
+go get与go mod (download)
 ```
+ zhaomei@zhaomeis-MacBook-Pro  ~/tools  go get git@github.com:Mei-Zhao/qshell.git
+go: cannot use path@version syntax in GOPATH mode
+```
+
+
+
 
 参考文献
 ```
