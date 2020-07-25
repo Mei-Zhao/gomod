@@ -18,6 +18,7 @@ func main() {
 }
 ```
 ```
+go run main.go ( 如果是go.mod中没有的文件会下载默认最新版本release 增加go.mod一行)
 go: downloading rsc.io/quote v1.5.2
 go: extracting rsc.io/quote v1.5.2
 go: downloading rsc.io/sampler v1.3.0
@@ -80,3 +81,6 @@ https://juejin.im/post/5ea186b3e51d45470e2bf88d （go mod基础命令）
 https://www.cnblogs.com/sunsky303/p/10710637.html (pkg下面包结构及作用)
 https://www.cnblogs.com/xiaobaiskill/p/11819071.html（goland设置）
 ```
+
+问题：
+直接删除 $GOPATH/pkg/mode 会报错 permission deny???
