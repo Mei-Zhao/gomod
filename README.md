@@ -54,8 +54,10 @@ Go1.13开始不再推荐使用GOPATH。意思就是说你可以在任何路径�
 
 go get与go mod (download)
 ```
- zhaomei@zhaomeis-MacBook-Pro  ~/tools  go get git@github.com:Mei-Zhao/qshell.git
-go: cannot use path@version syntax in GOPATH mode
+贡献，当你需要获取的代码包是自己需要编码的包，使用go get 或者git clone;对于你依赖的第三方包（一般一个仓库的方式确定的），比如go mod方式，获取第三方依赖，然后可以本地编码
+* 在本地新建github.com/qiniu 文件夹
+* git clone  git@github.com:qiniu/qshell.git （go mod模式管理第三方依赖）
+* 直接go run(go version 1.13.1) main.go 会下载mod依赖（如果本地已有缓存，可以复用）
 ```
 
 
